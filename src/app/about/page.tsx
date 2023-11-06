@@ -1,7 +1,7 @@
 import React from "react";
 
 async function getData() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts/1");
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
 
@@ -14,8 +14,14 @@ async function getData() {
 }
 const About = async () => {
   const res = await getData();
-  console.log("res in about", res);
-  return <div>body:{res?.title}</div>;
+  return (
+    <div>
+      body:
+      {res?.map((e: any) => {
+        <p>{e?.title}</p>;
+      })}
+    </div>
+  );
 };
 
 export default About;
