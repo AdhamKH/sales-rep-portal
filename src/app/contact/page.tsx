@@ -20,7 +20,7 @@ const Contact = async () => {
     <div>
       body Contact
       {res?.map((e: any) => {
-        return <p>{e?.title}</p>;
+        return <p key={e?.id}>{e?.title}</p>;
       })}
     </div>
   );
