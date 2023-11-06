@@ -20,7 +20,7 @@ const Contact = async () => {
     <div>
       body Contact
       {res?.map((e: any) => {
-        <p>{e?.title}</p>;
+        return <p>{e?.title}</p>;
       })}
     </div>
   );

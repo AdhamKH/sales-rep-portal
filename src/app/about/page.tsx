@@ -18,7 +18,7 @@ const About = async () => {
     <div>
       body:
       {res?.map((e: any) => {
-        <p>{e?.title}</p>;
+        return <p>{e?.title}</p>;
       })}
     </div>
   );
